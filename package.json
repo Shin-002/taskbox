@@ -33,7 +33,7 @@
     "init-msw": "msw init public/",
     "test:a11y": "a11y-report",
     "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_b26ae46ae6674da"
+    "chromatic": "npx chromatic --project-token CHROMATIC_PROJECT_TOKEN"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.5.1",
