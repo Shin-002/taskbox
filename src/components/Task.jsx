@@ -1,6 +1,8 @@
 import React from 'react';
 
 export default function Task({task: {id, title, state}, onArchiveTask, onPinTask}) {
+  console.log("aaaa")
+  console.log("hogehogehoge")
   return (
     <div className={`list-item ${state}`}>
       <label
