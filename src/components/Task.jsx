@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
-export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function Task({task: {id, title, state}, onArchiveTask, onPinTask}) {
   return (
     <div className={`list-item ${state}`}>
       <label
@@ -29,6 +28,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           readOnly={true}
           name="title"
           placeholder="Input title"
+          style={{background: 'red'}}
         />
       </label>
 
@@ -40,19 +40,9 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           aria-label={`pinTask-${id}`}
           key={`pinTask-${id}`}
         >
-          <span className={`icon-star`} />
+          <span className={`icon-star`}/>
         </button>
       )}
     </div>
   );
-}
-
-Task.propTypes = {
-  task: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired
-  }),
-  onArchiveTask: PropTypes.func,
-  onPinTask: PropTypes.func
 }
